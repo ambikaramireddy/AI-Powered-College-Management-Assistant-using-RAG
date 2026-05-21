@@ -96,17 +96,17 @@ The objectives of CampusGPT are:
 
 # 🛠️ Tech Stack
 
-| Technology | Purpose |
-|---|---|
-| Python | Core Programming |
-| Streamlit | Frontend UI |
-| FastAPI | Backend API |
-| Hugging Face | LLM & Embeddings |
-| FAISS | Vector Similarity Search |
-| NumPy | Numerical Computation |
-| PyPDF | PDF Extraction |
-| LangSmith | Monitoring & Tracing |
-| LangChain Text Splitters | Document Chunking |
+| Technology               | Purpose                  |
+|----------------------    |--------------------------|
+| Python                   | Core Programming         |
+| Streamlit                | Frontend UI              |
+| FastAPI                  | Backend API              |
+| Hugging Face             | LLM & Embeddings         |
+| FAISS                    | Vector Similarity Search |
+| NumPy                    | Numerical Computation    |
+| PyPDF                    | PDF Extraction           |
+| LangSmith                | Monitoring & Tracing     |
+| LangChain Text Splitters | Document Chunking        |
 
 ---
 
