@@ -43,7 +43,7 @@ Experience the live AI-powered chatbot here:
 
 ## 🔗 CampusGPT Live Application
 
-👉 **https://huggingface.co/spaces/ambika6/college**
+👉 **https://ai-powered-college-management-assistant-using-rag-pgkgzd2ahtxo.streamlit.app/**
 
 The deployed application allows users to:
 
@@ -481,31 +481,6 @@ Through this project, the following concepts were learned:
 - AI Chatbot Development
 
 ---
-
-# 📸 Application Screenshots
-
-Add screenshots after running the project.
-
-Suggested screenshots:
-
-- Home Page
-- Chat Interface
-- API Swagger UI
-- Query Response Examples
-- Source Retrieval Display
-
-Example:
-
-```text
-screenshots/
-├── homepage.png
-├── chatbot_ui.png
-├── api_docs.png
-└── response_example.png
-```
-
----
-
 # 📌 Conclusion
 
 CampusGPT demonstrates the successful integration of Artificial Intelligence and Retrieval-Augmented Generation for educational assistance systems.
