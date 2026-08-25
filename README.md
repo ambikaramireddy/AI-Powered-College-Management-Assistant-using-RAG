@@ -79,19 +79,7 @@ CampusGPT addresses these challenges using Retrieval-Augmented Generation and se
 
 ---
 
-# ✨ Key Features
 
-✅ AI-powered conversational chatbot  
-✅ PDF document understanding  
-✅ Semantic search using embeddings  
-✅ Context-aware response generation  
-✅ FastAPI backend integration  
-✅ Interactive Streamlit frontend  
-✅ FAISS vector database support  
-✅ Multi-document retrieval system  
-
-
----
 
 # 🎯 Project Objectives
 
