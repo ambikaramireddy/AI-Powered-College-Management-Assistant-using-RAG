@@ -11,8 +11,7 @@
 
 ---
 
-# 🌟 Overview
-
+# 🌟 INTRODUCTION
 CampusGPT is an AI-powered College Management Assistant developed using **Retrieval-Augmented Generation (RAG)** technology.  
 The project is designed to help students access college-related information instantly through natural language conversations.
 
@@ -55,27 +54,6 @@ The deployed application allows users to:
 
 ---
 
-# 📖 Introduction
-
-Educational institutions generate a large amount of information related to:
-
-- Admissions
-- Courses
-- Placements
-- Hostel Facilities
-- Fee Structures
-- Academic Regulations
-- Student Services
-
-Students often face difficulty accessing this information quickly and efficiently.
-
-Traditional systems depend heavily on static websites, notice boards, or manual support from staff members. This process can be time-consuming and confusing for students.
-
-CampusGPT solves this problem by providing an intelligent conversational assistant capable of understanding student queries and retrieving accurate information directly from college documents.
-
-The project improves accessibility, reduces administrative workload, and enhances student interaction using AI technologies.
-
----
 
 # ❗ Problem Statement
 
