@@ -1,187 +1,252 @@
-# CampusGPT 🎓
-## AI-Powered College Management Assistant using RAG
+# 🎓 CampusGPT
+
+### AI-Powered College Management Assistant using Retrieval-Augmented Generation (RAG)
+
+<p align="center">
+  <b>Ask questions. Retrieve relevant college information. Get grounded AI answers.</b>
+</p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Python-3.10-blue?style=for-the-badge&logo=python">
   <img src="https://img.shields.io/badge/Streamlit-Frontend-red?style=for-the-badge&logo=streamlit">
   <img src="https://img.shields.io/badge/FastAPI-Backend-green?style=for-the-badge&logo=fastapi">
-  <img src="https://img.shields.io/badge/FAISS-VectorDB-orange?style=for-the-badge">
-  <img src="https://img.shields.io/badge/HuggingFace-LLM-yellow?style=for-the-badge">
+  <img src="https://img.shields.io/badge/LangChain-RAG-orange?style=for-the-badge">
+  <img src="https://img.shields.io/badge/FAISS-VectorDB-yellow?style=for-the-badge">
+  <img src="https://img.shields.io/badge/HuggingFace-LLM-yellow?style=for-the-badge&logo=huggingface">
 </p>
 
 ---
 
-# 🌟 INTRODUCTION
-CampusGPT is an AI-powered College Management Assistant developed using **Retrieval-Augmented Generation (RAG)** technology.  
-The project is designed to help students access college-related information instantly through natural language conversations.
+## 📌 Overview
 
-Instead of manually searching through multiple PDFs or websites, students can simply ask questions like:
+**CampusGPT** is an AI-powered college management assistant that uses **Retrieval-Augmented Generation (RAG)** to answer student queries using information stored in institutional documents.
 
-- “Tell me about hostel facilities”
-- “What is the admission process?”
-- “Explain fee structure”
-- “Give placement details”
+Instead of manually searching through multiple college PDFs, students can ask questions in natural language such as:
 
-The chatbot retrieves relevant information from uploaded institutional documents and generates accurate contextual responses using Large Language Models (LLMs).
+> **"What are the hostel facilities?"**
 
-CampusGPT combines:
+> **"What is the admission process?"**
 
-- Artificial Intelligence
-- Natural Language Processing
-- Semantic Search
-- Vector Databases
-- Retrieval-Augmented Generation (RAG)
+> **"Tell me about the fee structure."**
 
-to create a smart digital assistant for educational institutions.
+> **"What placement opportunities are available?"**
+
+The system retrieves the most relevant information from the college knowledge base and provides a contextual response using a Large Language Model.
+
+### 💡 Core Idea
+
+**College Documents → Text Extraction → Chunking → Embeddings → FAISS → Semantic Retrieval → LLM → Final Answer**
 
 ---
 
-# 🚀 Live Demo
+## 🚀 Live Demo
 
-Experience the live AI-powered chatbot here:
+Try the deployed application:
 
-## 🔗 CampusGPT Live Application
+### 🔗 [CampusGPT Live Application](https://ai-powered-college-management-assistant-using-rag-pgkgzd2ahtxo.streamlit.app/)
 
-👉 **https://ai-powered-college-management-assistant-using-rag-pgkgzd2ahtxo.streamlit.app/**
+The application allows users to:
 
-The deployed application allows users to:
-
-✅ Ask college-related questions  
-✅ Retrieve information from uploaded PDFs  
-✅ Get instant AI-generated responses  
-✅ Experience semantic search with RAG  
-✅ Interact with a real-time educational chatbot
+* 💬 Ask college-related questions
+* 📄 Retrieve information from PDF documents
+* 🔎 Perform semantic document search
+* 🤖 Generate contextual AI responses
+* ⚡ Get information quickly through a conversational interface
 
 ---
 
+## 🎯 Problem Statement
 
-# ❗ Problem Statement
+College information is often distributed across multiple documents, notices, brochures, websites, and PDFs.
 
-Traditional college information systems are not always user-friendly and require students to manually search for information.
+Students may need to manually search for information related to:
 
-Students may struggle to find:
+* Admissions
+* Courses
+* Fee structure
+* Hostel facilities
+* Placements
+* Academic information
+* Campus facilities
+* College policies
 
-- Admission procedures
-- Fee details
-- Hostel information
-- Placement records
-- Academic regulations
-- Course details
+Traditional document-search methods can be time-consuming and difficult for users who do not know exactly where the required information is located.
 
-There is a need for an AI-powered assistant capable of:
+### Proposed Solution
 
-- Understanding natural language queries
-- Retrieving accurate institutional information
-- Providing instant responses
-- Reducing manual administrative effort
+CampusGPT provides a conversational interface where students can simply ask a question.
 
-CampusGPT addresses these challenges using Retrieval-Augmented Generation and semantic document retrieval techniques.
+The system:
 
----
-
-
-
-# 🎯 Project Objectives
-
-The main objectives of CampusGPT are:
-
-1. To develop an intelligent AI-based college assistant.
-2. To provide accurate responses to student queries.
-4. To reduce misinformation generated by AI models.
-5. To automate institutional information retrieval.
-6. To improve accessibility to academic information.
-7. To provide a user-friendly conversational interface.
-8. To integrate vector databases with Large Language Models effectively.
+1. Understands the user's query.
+2. Searches the college knowledge base using semantic similarity.
+3. Retrieves the most relevant document chunks.
+4. Passes the retrieved context to an LLM.
+5. Generates a grounded response based on the retrieved information.
 
 ---
 
-# 🛠️ Tech Stack
+# ✨ Key Features
 
-| Technology | Purpose |
-|------------|---------|
-| Python | Core Programming Language |
-| Streamlit | Frontend User Interface |
-| FastAPI | Backend API Framework |
-| Hugging Face | LLM & Embedding Models |
-| FAISS | Vector Similarity Search |
-| NumPy | Numerical Computation |
-| PyPDF | PDF Text Extraction |
-| LangSmith | Monitoring & Tracing |
-| LangChain | RAG Pipeline Management |
-| Text Splitters | Document Chunking |
+| Feature                   | Description                                              |
+| ------------------------- | -------------------------------------------------------- |
+| 💬 Conversational Chatbot | Ask questions using natural language                     |
+| 📄 PDF Knowledge Base     | Uses institutional PDF documents as the knowledge source |
+| 🔎 Semantic Search        | Retrieves relevant information based on meaning          |
+| 🧠 RAG Pipeline           | Combines retrieval with LLM generation                   |
+| 🗃️ FAISS Vector Database | Enables fast similarity search                           |
+| 🤖 Hugging Face LLM       | Generates contextual responses                           |
+| 🧩 Query Routing          | Classifies queries before retrieval                      |
+| 🌐 Streamlit UI           | Simple and interactive user interface                    |
+| ⚡ FastAPI Backend         | Provides API-based backend services                      |
+| 🔍 Monitoring             | LangSmith can be used for tracing and monitoring         |
 
 ---
 
 # 🏗️ System Architecture
 
 ```text
-                ┌──────────────────┐
-                │   User Query     │
-                └────────┬─────────┘
-                         │
-                         ▼
-              ┌────────────────────┐
-              │ Streamlit Frontend │
-              └────────┬───────────┘
-                       │
-                       ▼
-              ┌────────────────────┐
-              │ Query Classification│
-              └────────┬───────────┘
-                       │
-                       ▼
-              ┌────────────────────┐
-              │   FAISS Retriever  │
-              └────────┬───────────┘
-                       │
-                       ▼
-              ┌────────────────────┐
-              │ PDF Knowledge Base │
-              └────────┬───────────┘
-                       │
-                       ▼
-              ┌────────────────────┐
-              │ Hugging Face LLM   │
-              └────────┬───────────┘
-                       │
-                       ▼
-              ┌────────────────────┐
-              │ Final AI Response  │
-              └────────────────────┘
+                         USER
+                           │
+                           ▼
+                 ┌───────────────────┐
+                 │ Streamlit UI      │
+                 └─────────┬─────────┘
+                           │
+                           ▼
+                 ┌───────────────────┐
+                 │ Query Router      │
+                 │ / Classification  │
+                 └─────────┬─────────┘
+                           │
+                           ▼
+                 ┌───────────────────┐
+                 │ Query Embedding   │
+                 └─────────┬─────────┘
+                           │
+                           ▼
+                 ┌───────────────────┐
+                 │ FAISS Retriever   │
+                 └─────────┬─────────┘
+                           │
+                           ▼
+                 ┌───────────────────┐
+                 │ Relevant PDF      │
+                 │ Chunks            │
+                 └─────────┬─────────┘
+                           │
+                           ▼
+                 ┌───────────────────┐
+                 │ Context + Prompt  │
+                 └─────────┬─────────┘
+                           │
+                           ▼
+                 ┌───────────────────┐
+                 │ Hugging Face LLM  │
+                 └─────────┬─────────┘
+                           │
+                           ▼
+                 ┌───────────────────┐
+                 │ Final Response    │
+                 └───────────────────┘
 ```
 
 ---
 
-# ⚙️ Workflow
+# 🔄 RAG Pipeline
 
-## Step 1 — User Query
+CampusGPT follows a two-stage architecture:
 
-The student enters a question through the chatbot interface.
+## 1. 📚 Knowledge Base Creation
 
-## Step 2 — Query Classification
+College PDF documents are processed before users start asking questions.
 
-The system classifies the query into categories such as:
+```text
+PDF Documents
+      │
+      ▼
+Text Extraction
+      │
+      ▼
+Document Cleaning
+      │
+      ▼
+Text Chunking
+      │
+      ▼
+Embedding Generation
+      │
+      ▼
+FAISS Vector Index
+```
 
-- General Queries
-- Admission Queries
-- Academic Queries
-- Campus Queries
+### Step-by-step
 
-## Step 3 — PDF Retrieval
+**PDF Extraction**
 
-Relevant document chunks are retrieved using semantic similarity search.
+Text is extracted from college PDF documents using PDF processing libraries.
 
-## Step 4 — Context Generation
+**Text Chunking**
 
-Retrieved chunks are combined into contextual information.
+Large documents are divided into smaller chunks so that relevant sections can be retrieved efficiently.
 
-## Step 5 — Response Generation
+**Embedding Generation**
 
-The Large Language Model generates accurate contextual responses using the retrieved information.
+Each chunk is converted into a numerical vector using an embedding model.
 
-## Step 6 — Final Output
+**Vector Storage**
 
-The chatbot displays structured and user-friendly responses.
+The embeddings are stored in a FAISS index for similarity-based retrieval.
+
+---
+
+## 2. 🤖 Question Answering
+
+When a student asks a question:
+
+```text
+User Question
+      │
+      ▼
+Query Processing
+      │
+      ▼
+Query Embedding
+      │
+      ▼
+FAISS Similarity Search
+      │
+      ▼
+Top Relevant Chunks
+      │
+      ▼
+Prompt + Retrieved Context
+      │
+      ▼
+Large Language Model
+      │
+      ▼
+Grounded Answer
+```
+
+This approach helps the LLM answer questions using the available institutional information instead of relying only on its pretrained knowledge.
+
+---
+
+# 🛠️ Technology Stack
+
+| Technology                | Role in Project                        |
+| ------------------------- | -------------------------------------- |
+| **Python**                | Core application development           |
+| **Streamlit**             | Interactive frontend                   |
+| **FastAPI**               | Backend REST API                       |
+| **LangChain**             | RAG workflow and LLM orchestration     |
+| **FAISS**                 | Vector similarity search               |
+| **Hugging Face**          | Embedding and LLM integration          |
+| **PyPDF**                 | PDF text extraction                    |
+| **NumPy**                 | Numerical/vector operations            |
+| **LangSmith**             | LLM application monitoring and tracing |
+| **Python Text Splitters** | Document chunking                      |
 
 ---
 
@@ -190,179 +255,88 @@ The chatbot displays structured and user-friendly responses.
 ```text
 CampusGPT/
 │
-├── app.py
-├── api.py
-├── requirements.txt
-├── .env
+├── app.py                    # Streamlit frontend
+├── api.py                    # FastAPI backend
+├── requirements.txt          # Python dependencies
+├── .env                      # Environment variables
+├── README.md
 │
 ├── data/
-│   ├── college.pdf
+│   └── college.pdf           # College knowledge base
 │
-├── src/
-│   ├── router.py
-│   ├── prompts.py
-│   ├── pdf_rag.py
-│   ├── hf_embeddings.py
-│   ├── llm_client.py
-│   └── ...
-│
-└── README.md
+└── src/
+    ├── router.py             # Query classification/routing
+    ├── prompts.py            # Prompt templates
+    ├── pdf_rag.py            # PDF processing and RAG
+    ├── hf_embeddings.py      # Embedding model integration
+    ├── llm_client.py         # LLM integration
+    └── ...
 ```
 
 ---
 
-# 📘 File Explanation
+# 📘 Module Responsibilities
 
-| File | Description |
-|------|-------------|
-| `app.py` | Streamlit frontend application |
-| `api.py` | FastAPI backend server |
-| `router.py` | Query classification logic |
-| `prompts.py` | Prompt engineering templates |
-| `pdf_rag.py` | PDF extraction and retrieval |
-| `hf_embeddings.py` | Embedding generation |
-| `llm_client.py` | Hugging Face LLM integration |
-| `data/` | PDF knowledge base |
-| `requirements.txt` | Project dependencies |
+### `app.py`
+
+Provides the Streamlit-based chatbot interface through which users interact with CampusGPT.
+
+### `api.py`
+
+Implements the FastAPI backend and exposes endpoints for health checks and query processing.
+
+### `router.py`
+
+Classifies incoming questions and determines the appropriate processing route.
+
+### `pdf_rag.py`
+
+Handles PDF processing, document retrieval, and the RAG workflow.
+
+### `hf_embeddings.py`
+
+Generates vector embeddings for documents and user queries.
+
+### `llm_client.py`
+
+Handles communication with the configured Hugging Face language model.
+
+### `prompts.py`
+
+Contains prompt templates used to guide the LLM toward contextual and relevant responses.
 
 ---
 
-# 💬 Sample Input & Output
+# 💬 Example Interaction
 
-## 🧾 Sample Input
+### 👤 User
 
 ```text
-Tell me about hostel facilities
+Tell me about hostel facilities.
 ```
 
-## 🤖 Sample Output
+### 🔎 Retrieval
+
+CampusGPT searches the FAISS vector index and retrieves the most relevant hostel-related document chunks.
+
+### 🤖 AI Response
 
 ```text
-🏠 Hostel Facilities:
+The college provides separate hostel facilities for boys and girls.
+The hostel includes accommodation, food facilities, Wi-Fi connectivity,
+security, and other student amenities.
 
-• Separate hostels for boys and girls
-• Wi-Fi enabled rooms
-• 24/7 security
-• Hygienic food facilities
-• Laundry services available
-
-💰 Hostel Fees:
-• Boys Hostel: ₹45,000/year
-• Girls Hostel: ₹42,000/year
+For detailed hostel fees and availability, please refer to the
+official college information provided in the knowledge base.
 ```
+
+The response is generated using the retrieved document context.
 
 ---
 
-# ⚙️ Installation Guide
+# 🔌 API Documentation
 
-## 1️⃣ Clone Repository
-
-```bash
-git clone https://github.com/your-username/CampusGPT.git
-```
-
-```bash
-cd CampusGPT
-```
-
----
-
-## 2️⃣ Create Virtual Environment
-
-### Windows
-
-```bash
-python -m venv venv
-```
-
-```bash
-venv\Scripts\activate
-```
-
-### Linux / Mac
-
-```bash
-python3 -m venv venv
-```
-
-```bash
-source venv/bin/activate
-```
-
----
-
-## 3️⃣ Install Dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
----
-
-# 🔑 Environment Variables
-
-Create a `.env` file in the project root directory.
-
-```env
-HF_TOKEN=your_huggingface_token
-
-HF_PROVIDER=hf-inference
-
-HF_CHAT_MODEL=meta-llama/Llama-3.1-8B-Instruct
-
-HF_EMBEDDING_MODEL=sentence-transformers/all-MiniLM-L6-v2
-```
-
----
-
-# 📄 Add College Documents
-
-Place all college PDF documents inside:
-
-```text
-data/
-```
-
-Example:
-
-```text
-data/
-├── college.pdf
-```
-
----
-
-# ▶️ Running the Project
-
-## Run Streamlit Frontend
-
-```bash
-streamlit run app.py
-```
-
-Frontend URL:
-
-```text
-http://localhost:8501
-```
-
----
-
-## Run FastAPI Backend
-
-```bash
-uvicorn api:app --reload
-```
-
-Backend URL:
-
-```text
-http://127.0.0.1:8000
-```
-
----
-
-# 🌐 API Endpoints
+CampusGPT also provides a FastAPI backend.
 
 ## Health Check
 
@@ -370,15 +344,23 @@ http://127.0.0.1:8000
 GET /health
 ```
 
+### Example Response
+
+```json
+{
+  "status": "healthy"
+}
+```
+
 ---
 
-## Query API
+## Query Endpoint
 
 ```http
 POST /query
 ```
 
-### Request Example
+### Request
 
 ```json
 {
@@ -386,13 +368,13 @@ POST /query
 }
 ```
 
-### Response Example
+### Response
 
 ```json
 {
   "route": "COLLEGE_INFO",
   "question": "Tell me about hostel facilities",
-  "answer": "🏠 Hostel Facilities: ...",
+  "answer": "The college provides hostel facilities...",
   "sources": [
     {
       "source": "Hostel_Info.pdf",
@@ -405,55 +387,251 @@ POST /query
 
 ---
 
-# ✅ Advantages of the Project
+# ⚙️ Installation
 
-✅ Provides instant student support  
-✅ Reduces administrative workload  
-✅ Improves accessibility of information  
-✅ Reduces misinformation  
-✅ Interactive conversational interface  
-✅ Supports multiple PDF documents  
-✅ Fast semantic retrieval system  
-✅ Scalable AI architecture  
+## 1. Clone the Repository
+
+```bash
+git clone https://github.com/your-username/CampusGPT.git
+cd CampusGPT
+```
+
+## 2. Create a Virtual Environment
+
+### Windows
+
+```bash
+python -m venv venv
+venv\Scripts\activate
+```
+
+### Linux / macOS
+
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+
+## 3. Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+# 🔐 Environment Variables
+
+Create a `.env` file in the project root:
+
+```env
+HF_TOKEN=your_huggingface_token
+
+HF_PROVIDER=hf-inference
+
+HF_CHAT_MODEL=meta-llama/Llama-3.1-8B-Instruct
+
+HF_EMBEDDING_MODEL=sentence-transformers/all-MiniLM-L6-v2
+```
+
+> ⚠️ Never commit your actual API keys or tokens to GitHub.
+
+Add `.env` to `.gitignore`:
+
+```text
+.env
+venv/
+__pycache__/
+```
 
 ---
 
-# 🚀 Future Improvements
+# 📄 Adding College Documents
 
-- 🌐 Multilingual Support
-- 🎤 Voice Assistant
-- 📱 Mobile Application
-- 🧑‍🎓 Student Authentication
-- 🗄️ Database Integration
-- 📊 Admin Dashboard
-- 🔔 Notification System
-- ☁️ Cloud Deployment
+Place your college PDFs inside the `data/` directory.
+
+Example:
+
+```text
+data/
+├── admission.pdf
+├── hostel.pdf
+├── placements.pdf
+├── courses.pdf
+└── college_information.pdf
+```
+
+The documents become the knowledge source for the RAG pipeline.
+
+---
+
+# ▶️ Running the Application
+
+## Start Streamlit
+
+```bash
+streamlit run app.py
+```
+
+The application will be available at:
+
+```text
+http://localhost:8501
+```
+
+## Start FastAPI
+
+```bash
+uvicorn api:app --reload
+```
+
+The API will be available at:
+
+```text
+http://127.0.0.1:8000
+```
+
+FastAPI documentation:
+
+```text
+http://127.0.0.1:8000/docs
+```
 
 ---
 
-# 📚 Learning Outcomes
+# 🧪 Example Questions
 
-Through this project, the following concepts were learned:
+Users can ask questions such as:
 
-- Retrieval-Augmented Generation (RAG)
-- Natural Language Processing
-- Semantic Search
-- Vector Databases
-- FastAPI Development
-- Streamlit UI Design
-- Hugging Face LLM Integration
-- Prompt Engineering
-- PDF Text Processing
-- AI Chatbot Development
+```text
+What is the admission process?
+```
+
+```text
+What courses are offered by the college?
+```
+
+```text
+Tell me about hostel facilities.
+```
+
+```text
+What is the fee structure?
+```
+
+```text
+Tell me about placement opportunities.
+```
+
+```text
+What campus facilities are available?
+```
 
 ---
-# 📌 Conclusion
 
-CampusGPT demonstrates the successful integration of Artificial Intelligence and Retrieval-Augmented Generation for educational assistance systems.
+# 🛡️ How RAG Helps Reduce Hallucination
 
-The chatbot provides accurate, contextual, and document-based responses to student queries while reducing manual administrative effort.
+A major challenge with LLM-based applications is **hallucination**, where a model may generate information that is not supported by the actual knowledge source.
 
-By combining semantic search, vector databases, and Large Language Models, CampusGPT creates a scalable and intelligent educational assistant capable of improving digital interaction within academic institutions.
+CampusGPT addresses this by retrieving relevant information from the college document collection and providing that information as context to the LLM.
+
+```text
+User Query
+    ↓
+Retrieve Relevant Documents
+    ↓
+Provide Retrieved Context to LLM
+    ↓
+Generate Contextual Answer
+```
+
+This makes the system more suitable for institution-specific question answering.
+
+> **Important:** RAG reduces the risk of hallucination but does not guarantee that every generated answer is factually correct. The quality of responses depends on the quality and completeness of the source documents and retrieval pipeline.
+
+---
+
+# 📊 Advantages
+
+* ⚡ Faster access to college information
+* 💬 Natural-language interaction
+* 🔎 Semantic document retrieval
+* 📄 Supports PDF-based knowledge sources
+* 🤖 Uses LLMs for contextual responses
+* 🧠 Reduces dependence on keyword-based search
+* 🏫 Useful for college information assistance
+* 🔌 Provides both UI and API access
+* 📈 Can be extended with additional institutional data
+
+---
+
+# 🔮 Future Enhancements
+
+### 🌐 Multilingual Support
+
+Allow students to interact with the assistant in multiple Indian languages.
+
+### 🎤 Voice Assistant
+
+Add speech-to-text and text-to-speech capabilities.
+
+### 📱 Mobile Application
+
+Build a mobile version for Android and iOS.
+
+### 🔐 Student Authentication
+
+Provide personalized responses for authenticated students.
+
+### 🗄️ Database Integration
+
+Connect the system with structured student and academic databases.
+
+### 📊 Admin Dashboard
+
+Allow administrators to upload, update, and manage institutional documents.
+
+### 🔔 Notification System
+
+Provide important college announcements and deadline reminders.
+
+### ☁️ Scalable Cloud Deployment
+
+Deploy the complete architecture using scalable cloud infrastructure.
+
+---
+
+# 📚 Key Learning Outcomes
+
+Through this project, I gained practical experience in:
+
+* Retrieval-Augmented Generation
+* Large Language Models
+* Natural Language Processing
+* Semantic Search
+* Vector Databases
+* Document Embeddings
+* Prompt Engineering
+* LangChain
+* Hugging Face
+* FAISS
+* FastAPI
+* Streamlit
+* PDF Processing
+* LLM Application Development
+* AI Application Deployment
+
+---
+
+# 🎓 Project Highlights
+
+### What makes CampusGPT different?
+
+Instead of building a chatbot that simply generates answers from an LLM, CampusGPT combines:
+
+**Document Knowledge + Semantic Retrieval + LLM Generation**
+
+This creates a more useful architecture for institution-specific question answering.
 
 ---
 
@@ -461,23 +639,28 @@ By combining semantic search, vector databases, and Large Language Models, Campu
 
 ## Ambika Ramireddy
 
-### CSE - Data Science Student  
-Passionate about Artificial Intelligence, Machine Learning, NLP, and Generative AI.
+**B.Tech – Computer Science & Engineering (Data Science)**
+
+Interested in:
+
+* Artificial Intelligence
+* Machine Learning
+* Generative AI
+* Natural Language Processing
+* RAG Applications
 
 ---
 
-# ⭐ Support
+# ⭐ Support the Project
 
-If you found this project useful:
+If you find CampusGPT useful:
 
-⭐ Star the repository  
-🍴 Fork the project  
-📢 Share with others  
+⭐ Star the repository
+🍴 Fork the repository
+📢 Share the project
 
 ---
 
 # 📜 License
 
 This project is developed for educational and learning purposes.
-
----
